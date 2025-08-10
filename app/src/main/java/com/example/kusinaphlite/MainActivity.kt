@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                         arguments = listOf(navArgument("mealId") { type = NavType.StringType })
                     ) { backStackEntry ->
                         val id = backStackEntry.arguments?.getString("mealId").orEmpty()
-                        MealDetailScreen(id, viewModel)
+                        MealDetailScreen(id, viewModel, navController)
                     }
                 }
             }
